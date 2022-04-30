@@ -1,0 +1,52 @@
+body{
+  background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)),url('clouds.jpg');
+}
+#resultSection{
+  position: absolute;
+  top: 240px;
+  left: 274px;
+  width: 60%;
+  height: 200px;
+  color: white;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.divBorder {
+  background-color: lightsteelblue;
+  border: 1px solid white;
+  border-radius: 20px;
+}
+#about{
+  text-indent: 40px;
+  font: 19px;
+  padding: 10px;
+  background-color: lightskyblue;
+  position: absolute;
+  top: 300px;
+  width: 50%;
+  margin: auto;
+  border: 8px solid white;
+  color: white;
+  left: 323px;
+  border-radius: 17px; 
+}
+div{
+      color: white;
+      height: auto;
+      width:auto;
+      margin:10px;
+      padding:5px;
+    }
+   button{
+        background-color: #5affd8;
+        padding: 10px;
+        padding-bottom: 25px;
+        border: 1px solid orange;
+        border-radius: 4px;
+        cursor: pointer;
+        margin:5px;
+        width:auto;
+        height:30px;
+      }
