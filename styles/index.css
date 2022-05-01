@@ -1,45 +1,56 @@
 body{
-  background-image: linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.5)),url('clouds.jpg');
+  background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7WflO3d3TssB39riruC6_yUndOrNMUiQt8Q&usqp=CAU');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  align-items: center;
 }
+
+#inputForm{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+
+  margin-top: 5vh;
+}
+
 #resultSection{
-  position: absolute;
-  top: 240px;
-  left: 274px;
   width: 60%;
-  height: 200px;
+  margin-top: 10vh;
   color: white;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
   align-items: center;
 }
+
 .divBorder {
   background-color: lightsteelblue;
   border: 1px solid white;
   border-radius: 20px;
 }
+
 #about{
-  text-indent: 40px;
   font: 19px;
-  padding: 10px;
+  padding: 1vh;
   background-color: lightskyblue;
-  position: absolute;
-  top: 300px;
-  width: 50%;
-  margin: auto;
+  width: 60%;
   border: 8px solid white;
   color: white;
-  left: 323px;
-  border-radius: 17px; 
+  border-radius: 17px;
 }
+
 div{
       color: white;
       height: auto;
       width:auto;
       margin:10px;
       padding:5px;
-    }
-   button{
+}
+button{
         background-color: #5affd8;
         padding: 10px;
         padding-bottom: 25px;
@@ -49,4 +60,4 @@ div{
         margin:5px;
         width:auto;
         height:30px;
-      }
+}

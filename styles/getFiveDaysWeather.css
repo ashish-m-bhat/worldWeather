@@ -1,9 +1,7 @@
 #fiveDaysWeather{
-  position: absolute;
-  top: 542px;
   width: 98%;
-  height: 269px;
-  margin: 20px 5px 20px 5px;
+  margin-top: 10vh;
+
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -15,5 +13,5 @@
   margin: 5px;
   padding: 5px;
   padding-right: 66px;
-  
+
 }

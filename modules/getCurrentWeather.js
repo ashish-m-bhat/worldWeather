@@ -26,9 +26,10 @@ const clearResultSection = () =>{
 // Whe the search Bar is cleared, hide resultSection & bring in About
 const clearSearchFunction = () =>{
   placeQuery.value='';
-  resultSection.style.visibility="hidden";
-  fiveDaysWeather.style.visibility="hidden";
+  resultSection.style.display="none";
+  fiveDaysWeather.style.display="none";
   document.body.appendChild(about);
+  about.style.marginTop="22%";
 }
 
 // Seach current weather
@@ -37,13 +38,13 @@ const getCurrentWeatherFunction = (event) =>{
   let location = placeQuery.value;
   if(!location)
     return;
-  
+
   // Remove About, bring in resultSection & clear the resultSection
   {
     about.remove();
-    resultSection.style.visibility="visible";
-    fiveDaysWeather.style.visibility="visible";
-    clearResultSection();
+    resultSection.style.display="";
+    fiveDaysWeather.style.display="";
+    clearResultSection()
     resultSection.classList.add('divBorder');
   }
 
@@ -53,7 +54,7 @@ const getCurrentWeatherFunction = (event) =>{
       const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
       const date = new Date();
       const data = [response.name,`${months[date.getMonth()]}, ${date.getDate()}`, `${response.main.temp} &#8451`];
-  
+
       data.forEach((element, dataIndex) => {
         let p = document.createElement('p');
         p.innerHTML = element;
@@ -61,7 +62,7 @@ const getCurrentWeatherFunction = (event) =>{
         if(dataIndex === data.length-1){
           p.style.cssText = `font:26px bold italic`;
         }
-          
+
       });
     })();
 
@@ -80,7 +81,7 @@ const getCurrentWeatherFunction = (event) =>{
         let p = document.createElement('p');
         p.innerHTML = element;
         longDescription.appendChild(p);
-      }); 
+      });
     }
     )();
   }
@@ -93,10 +94,10 @@ const getCurrentWeatherFunction = (event) =>{
 inputForm.addEventListener('click', function(event){
   event.preventDefault();
   let actualInput = event.target;
-  
+
   if(actualInput.matches("#clearSearch"))
     clearSearchFunction();
-  
+
   if(actualInput.matches("#searchCurrentWeather")){
     getCurrentWeatherFunction(event);
   }

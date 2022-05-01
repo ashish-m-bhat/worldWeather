@@ -1,21 +1,22 @@
 #placeQuery{
-  position: absolute;
   border: 2px solid aqua;
-  top:36px;
-  height:30px;
-  width:300px;
+  width: 15vw;
+  height: 3vh;
+  margin-top: 2vh;
+  margin-right: 2.5vw;
 }
 #searchCurrentWeather{
-  position: absolute;
-  left:310px;
-  margin-top:20px;
-  margin-left:35px;
   cursor: pointer;
+  margin-top: 2vh;
+  margin-right: 2.5vw;
+  height: 4vh;
+  width:2.5vw;
 }
 #clearSearch{
-  position:absolute;
-  left:430px;
-  top:30px;
-  color:red;
-  opacity:0.5
+  margin-top: 0vh;
+  background-color: transparent;
+  color: red;
+  font-size: 5vh;
+  font-weight: 200;
+  border: none;
 }
