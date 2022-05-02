@@ -10,6 +10,6 @@ export default function fetchDataFromAPI(queryString, callback){
   };
   fetch(queryString, options)
   .then(response => response.json())
-  .then(response => { console.log(response); callback(response);})
-  .catch(err => console.error(err));
+  .then(response => callback(response))
+  .catch(error => alert("Couldn't fetch Data"));
 }
