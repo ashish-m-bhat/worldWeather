@@ -1,12 +1,13 @@
 body{
   background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7WflO3d3TssB39riruC6_yUndOrNMUiQt8Q&usqp=CAU');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size:cover;
 
   display: flex;
   flex-flow: column nowrap;
-  justify-content: space-around;
+  justify-content:space-around;
   align-items: center;
+  font-weight: 500;
 }
 
 #inputForm{
@@ -34,11 +35,12 @@ body{
 }
 
 #about{
-  font: 19px;
+  font-size: 2vh;
+  text-align: center;
   padding: 1vh;
-  background-color: lightskyblue;
-  width: 60%;
-  border: 8px solid white;
+  background-color: transparent;
+  width: 40%;
+  border: 3px solid white;
   color: white;
   border-radius: 17px;
 }
@@ -60,4 +62,14 @@ button{
         margin:5px;
         width:auto;
         height:30px;
+}
+
+@media only screen and (max-width: 1000px) {
+  body {
+    background-size: 100vh;
+  }
+  #about{
+    font-size: 1.5vh;
+    width: 90%;
+  }
 }
