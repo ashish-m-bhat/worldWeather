@@ -1,5 +1,4 @@
 import clearResultSection from '../clearResultSection.js';
-import getFiveDaysWeather from './getFiveDaysWeather.js';
 import getCurrentWeather from './getCurrentWeather.js';
 
 const placeQuery = document.getElementById("placeQuery");
@@ -9,23 +8,18 @@ const fiveDaysWeather = document.getElementById("fiveDaysWeather");
 
 // Get the Current Weather + Weather forecast for the next 5 days
 const getWeather = () =>{
-  const location = placeQuery.value;
+  const enteredLocation = placeQuery.value;
 
   // If no location has been entered, return.
-  if(!location)
+  if(!enteredLocation)
     return;
 
-  // Remove #about, bring in resultSection & fiveDaysWeather and clear the resultSection.
-  {
+    // Remove #about & clear the resultSection. On each search, the resultSection is "hidden" but it's children are deleted and re contsructed
     about.remove();
-    resultSection.style.display="";
-    fiveDaysWeather.style.display="";
     clearResultSection();
     resultSection.classList.add('divBorder');
-  }
 
-  getCurrentWeather(location);
-  getFiveDaysWeather(location);
+  getCurrentWeather();
 }
 
 export default getWeather;

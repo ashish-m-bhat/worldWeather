@@ -1,4 +1,5 @@
 import fetchDataFromAPI from "../fetchDataFromAPI.js";
+import getFiveDaysWeather from "./getFiveDaysWeather.js";
 
 const shortDescription = document.getElementById("shortDescription");
 const description = document.getElementById("description");
@@ -6,6 +7,9 @@ const longDescription = document.getElementById("longDescription");
 
   // Display shortDescription, description & longDescription using IIFEs
   const displayCurrentWeather = response =>{
+    // Bring in resultSection div
+    resultSection.style.display="";
+
     (function displayShortDespcription(){
       const months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
       const date = new Date();
@@ -40,10 +44,12 @@ const longDescription = document.getElementById("longDescription");
       });
     }
     )();
+    getFiveDaysWeather();
   }
 
+
   // Get the current weather by calling the open weather map API
-  const getCurrentWeather = (location) =>{
-    fetchDataFromAPI(`https://community-open-weather-map.p.rapidapi.com/weather?q=${location}&lat=0&lon=0&id=0&lang=null&units=metric`, displayCurrentWeather);
+  const getCurrentWeather = () =>{
+    fetchDataFromAPI(`https://community-open-weather-map.p.rapidapi.com/weather?q=${placeQuery.value}&lat=0&lon=0&id=0&lang=null&units=metric`, displayCurrentWeather);
   }
   export default getCurrentWeather;

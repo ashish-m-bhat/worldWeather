@@ -4,6 +4,8 @@ const fiveDaysWeather = document.getElementById("fiveDaysWeather");
 
 // Post fetch function
 const displayFiveDaysWeather = (response) =>{
+  // Bring In fiveDaysWeather div
+  fiveDaysWeather.style.display="";
 
   const daysArray = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 
@@ -31,12 +33,12 @@ const displayFiveDaysWeather = (response) =>{
 }
 
 // Get the weather for next 5 days by calling the open weather map API
-const getFiveDaysWeather = (location) =>{
+const getFiveDaysWeather = () =>{
 
   // Adding the border-right
   fiveDaysWeather.classList.add('divBorder');
 
-  fetchDataFromAPI(`https://community-open-weather-map.p.rapidapi.com/forecast?q=${location}`, displayFiveDaysWeather);
+  fetchDataFromAPI(`https://community-open-weather-map.p.rapidapi.com/forecast?q=${placeQuery.value}`, displayFiveDaysWeather);
 }
 
 export default getFiveDaysWeather;

@@ -1,5 +1,11 @@
 // Generic fetch API helper. Takes a query string & a cb
 
+const displayErrorMessage = () =>{
+  resultSection.innerHTML = 'Oops, No Data found!';
+  resultSection.style.fontSize = '3vh';
+  resultSection.style.textAlign = 'center';
+}
+
 export default function fetchDataFromAPI(queryString, callback){
   const options = {
     method: 'GET',
@@ -11,5 +17,5 @@ export default function fetchDataFromAPI(queryString, callback){
   fetch(queryString, options)
   .then(response => response.json())
   .then(response => callback(response))
-  .catch(error => alert("Couldn't fetch Data"));
+  .catch(error => displayErrorMessage());
 }
