@@ -29,7 +29,7 @@ const clearSearchFunction = () =>{
   resultSection.style.display="none";
   fiveDaysWeather.style.display="none";
   document.body.appendChild(about);
-  about.style.marginTop="30vh";
+  about.style.marginTop="22%";
 }
 
 // Seach current weather
@@ -60,7 +60,7 @@ const getCurrentWeatherFunction = (event) =>{
         p.innerHTML = element;
         shortDescription.appendChild(p);
         if(dataIndex === data.length-1){
-          p.style.cssText = `font:30px bold italic`;
+          p.style.cssText = `font:26px bold italic`;
         }
 
       });

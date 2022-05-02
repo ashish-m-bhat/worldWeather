@@ -20,20 +20,3 @@
   font-weight: 200;
   border: none;
 }
-
-@media only screen and (max-width: 1000px) {
-  #placeQuery{
-    margin-right: 5vw;
-    width: 25vw;
-  }
-
-  #searchCurrentWeather{
-    height: 3.5vh;
-    width:5vw;
-    margin-right: 4vw;
-  }
-
-  #clearSearch{
-    margin-top: 0.5vh;
-  }
-}
