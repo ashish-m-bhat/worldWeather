@@ -1,3 +1,5 @@
+@import url('./getCurrentWeather.css');
+@import url('./getFiveDaysWeather.css');
 body{
   background-image:url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7WflO3d3TssB39riruC6_yUndOrNMUiQt8Q&usqp=CAU');
   background-repeat: no-repeat;
@@ -29,7 +31,7 @@ body{
 }
 
 .divBorder {
-  background-color: lightsteelblue;
+  background-color: transparent;
   border: 1px solid white;
   border-radius: 20px;
 }
