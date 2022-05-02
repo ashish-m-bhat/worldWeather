@@ -3,7 +3,7 @@
   margin-top: 10vh;
 
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-around;
   align-items: center;
 }
@@ -14,4 +14,11 @@
   padding: 5px;
   padding-right: 66px;
 
+}
+
+@media only screen and (max-width:1000px) {
+    #fiveDaysWeather{
+      font-size: 1.1vw;
+      margin-top: 15vh;
+    }
 }
