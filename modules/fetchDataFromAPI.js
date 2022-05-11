@@ -15,7 +15,11 @@ export default function fetchDataFromAPI(queryString, callback){
     }
   };
   fetch(queryString, options)
-  .then(response => response.json())
-  .then(response => callback(response))
+  .then(response =>{
+    if (response.ok)
+      return response.json();
+  })
+  .then(response => {callback(response)})
   .catch(error => displayErrorMessage());
+
 }

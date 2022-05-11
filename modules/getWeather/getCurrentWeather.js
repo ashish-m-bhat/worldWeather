@@ -5,6 +5,9 @@ const shortDescription = document.getElementById("shortDescription");
 const description = document.getElementById("description");
 const longDescription = document.getElementById("longDescription");
 
+//variables to be passed to getFiveDaysWeather
+let enteredLocationGlobal='', coordinatesGlobal={};
+
   // Display shortDescription, description & longDescription using IIFEs
   const displayCurrentWeather = response =>{
     // Bring in resultSection div
@@ -44,12 +47,22 @@ const longDescription = document.getElementById("longDescription");
       });
     }
     )();
-    getFiveDaysWeather();
+
+    getFiveDaysWeather(enteredLocationGlobal, coordinatesGlobal);
+
   }
 
 
   // Get the current weather by calling the open weather map API
-  const getCurrentWeather = () =>{
-    fetchDataFromAPI(`https://community-open-weather-map.p.rapidapi.com/weather?q=${placeQuery.value}&lat=0&lon=0&id=0&lang=null&units=metric`, displayCurrentWeather);
+  const getCurrentWeather = (enteredLocation, coordinates) =>{
+    enteredLocationGlobal = enteredLocation;
+    coordinatesGlobal = coordinates;
+
+    let query = coordinates ? '' : enteredLocation;
+    let latitude = coordinates ? coordinates.latitude : 0;
+    let longitude = coordinates ? coordinates.longitude : 0;
+    fetchDataFromAPI(`https://community-open-weather-map.p.rapidapi.com/weather?q=${query}&lat=${latitude}&lon=${longitude}&id=0&lang=null&units=metric`, displayCurrentWeather)
+
+
   }
   export default getCurrentWeather;

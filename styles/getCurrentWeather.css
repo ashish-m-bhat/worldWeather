@@ -19,6 +19,25 @@
   font-size: 5vh;
   font-weight: 200;
   border: none;
+  margin-top: 1vh;
+  cursor: pointer;
+}
+#clearSearch:hover{
+  color: orange;
+}
+#myLocationWeather{
+  cursor: pointer;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  margin-top: 1.7vh;
+  margin-left: 2vw;
+  height: 4vh;
+  width: 10vw;
+  border-radius: 1vh;
+}
+#myLocationWeather:hover{
+  background-color: gray;
 }
 
 @media only screen and (max-width: 1000px) {
