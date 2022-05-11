@@ -33,12 +33,16 @@ const displayFiveDaysWeather = (response) =>{
 }
 
 // Get the weather for next 5 days by calling the open weather map API
-const getFiveDaysWeather = () =>{
+const getFiveDaysWeather = (enteredLocation, coordinates) =>{
 
   // Adding the border-right
   fiveDaysWeather.classList.add('divBorder');
 
-  fetchDataFromAPI(`https://community-open-weather-map.p.rapidapi.com/forecast?q=${placeQuery.value}`, displayFiveDaysWeather);
+  let query = coordinates ? '' : enteredLocation;
+  let latitude = coordinates ? coordinates.latitude : 0;
+  let longitude = coordinates ? coordinates.longitude : 0;
+
+  fetchDataFromAPI(`https://community-open-weather-map.p.rapidapi.com/forecast?q=${query}&lat=${latitude}&lon=${longitude}&id=0&lang=null&units=metric`, displayFiveDaysWeather);
 }
 
 export default getFiveDaysWeather;

@@ -6,7 +6,7 @@ document.querySelector("#inputForm").addEventListener('click', function(event){
     event.preventDefault();
     let actualInput = event.target;
 
-    if(actualInput.matches("#searchCurrentWeather")){
+    if(actualInput.matches("#searchCurrentWeather") || actualInput.matches("#myLocationWeather")){
       getWeather(event);
     }
 
