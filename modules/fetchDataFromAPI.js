@@ -4,6 +4,11 @@ const displayErrorMessage = () =>{
   resultSection.innerHTML = 'Oops, No Data found!';
   resultSection.style.fontSize = '3vh';
   resultSection.style.textAlign = 'center';
+
+  document.getElementById('clearSearch').disabled=true;
+  setTimeout(()=> {
+    window.location.reload();
+  },1000);
 }
 
 export default function fetchDataFromAPI(queryString, callback){
